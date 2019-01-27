@@ -1,0 +1,45 @@
+
+
+20:58:36.536 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into port
+20:58:36.544 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+20:58:36.544 [main] INFO  by.chebotar.service.port.Port - unlock()
+20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Titanic unload successfully
+20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into port
+20:58:36.545 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+20:58:36.545 [main] INFO  by.chebotar.service.port.Port - unlock()
+20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman unload successfully
+20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Man come into port
+20:58:36.546 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+20:58:36.546 [main] INFO  by.chebotar.service.port.Port - unlock()
+20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Man unload successfully
+20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into port
+20:58:36.547 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+20:58:36.547 [main] INFO  by.chebotar.service.port.Port - unlock()
+20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Bismark unload successfully
+20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Scotland come into port
+
+21:00:59.475 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into port
+21:00:59.500 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+21:00:59.500 [main] INFO  by.chebotar.service.port.Port - unlock()
+21:00:59.500 [main] INFO  by.chebotar.bean.Ship - Ship Titanic unload successfully
+21:00:59.500 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
+21:00:59.500 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into port
+21:00:59.500 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+21:00:59.500 [main] INFO  by.chebotar.service.port.Port - unlock()
+21:00:59.500 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman unload successfully
+21:00:59.501 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
+21:00:59.501 [main] INFO  by.chebotar.bean.Ship - Ship Man come into port
+21:00:59.501 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+21:00:59.501 [main] INFO  by.chebotar.service.port.Port - unlock()
+21:00:59.501 [main] INFO  by.chebotar.bean.Ship - Ship Man unload successfully
+21:00:59.501 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
+21:00:59.501 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into port
+21:00:59.501 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+21:00:59.501 [main] INFO  by.chebotar.service.port.Port - unlock()
+21:00:59.502 [main] INFO  by.chebotar.bean.Ship - Ship Bismark unload successfully
+21:00:59.502 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
+21:00:59.502 [main] INFO  by.chebotar.bean.Ship - Ship Scotland come into port
+21:00:59.502 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
+21:00:59.502 [main] INFO  by.chebotar.service.port.Port - unlock()
+21:00:59.502 [main] INFO  by.chebotar.bean.Ship - Ship Scotland unload successfully
+21:00:59.502 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add

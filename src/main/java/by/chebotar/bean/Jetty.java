@@ -3,25 +3,44 @@ package by.chebotar.bean;
 
 public class Jetty{
 
-  private boolean isFree;
-  private int shipmentCapacity = 0;
+  private int shipmentCapacity;
+  private final int maxCapacity;
 
-  public Jetty(){
 
-  }
-
-  public Jetty(int startShipmentCapacity){
+  public Jetty(int startShipmentCapacity, int maxCapacity) {
     shipmentCapacity = startShipmentCapacity;
-  }
-  public void changeJettyState(boolean free) {
-    isFree = free;
+    this.maxCapacity = maxCapacity;
   }
 
-  public boolean isFree(){
-    return isFree;
-  }
-
-  public void setShipmentIntoJetty(int shipmentCapacity) {
+  public boolean setShipmentIntoJetty(int shipmentCapacity) {
+    if(this.shipmentCapacity + shipmentCapacity > maxCapacity){
+     return false;
+    }
     this.shipmentCapacity += shipmentCapacity;
+    return true;
+  }
+
+  public boolean removeShipmentFromJetty(int shipmentCapacity){
+    if(this.shipmentCapacity - shipmentCapacity < 0){
+      return false;
+    }
+    this.shipmentCapacity -= shipmentCapacity;
+    return true;
+  }
+
+  public int getShipmentCapacity() {
+    return shipmentCapacity;
+  }
+
+  public int getMaxCapacity() {
+    return maxCapacity;
+  }
+
+  @Override
+  public String toString() {
+    return "Jetty{" +
+        ", shipmentCapacity=" + shipmentCapacity +
+        ", maxCapacity=" + maxCapacity +
+        '}';
   }
 }

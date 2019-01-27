@@ -1,0 +1,23 @@
+[
+  {
+   "name" :  "Titanic",
+   "shipment" : 1000,
+   "maxCapacity" :  12000},
+  {
+   "name" :  "Flying Dutchman",
+   "shipment" : 100,
+   "maxCapacity" :  1200},
+  {
+   "name" :  "Man",
+   "shipment" : 4568,
+   "maxCapacity" :  30000},
+  {
+   "name" :  "Bismark",
+   "shipment" : 7896,
+   "maxCapacity" :  45689},
+  {
+   "name" :  "Scotland",
+   "shipment" : 775,
+   "maxCapacity" :  11230
+  }
+]

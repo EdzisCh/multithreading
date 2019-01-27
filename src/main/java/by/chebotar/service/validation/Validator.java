@@ -1,5 +1,8 @@
 package by.chebotar.service.validation;
 
-public interface Validator {
-  boolean isValid(String request);
+import by.chebotar.service.exception.ShipValidationServiceException;
+import java.util.List;
+
+public interface Validator<T> {
+  void isValid(List<T> objectsToValidate) throws ShipValidationServiceException;
 }
