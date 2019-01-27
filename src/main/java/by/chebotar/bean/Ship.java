@@ -64,7 +64,7 @@ public class Ship implements Runnable, Serializable {
       port.exemptJetty(currentJetty);
       if (numberOfCurrentJetties >= ATTEMPTS){
         try{
-          throw new  ServiceException("All jetties cannot serve ship" + name);
+          throw new  ServiceException("Port cannot serve ship" + name);
         } catch (ServiceException e){
           LOGGER.error(e);
           return;
@@ -74,10 +74,10 @@ public class Ship implements Runnable, Serializable {
 
   }
 
-  private boolean unloadShip(Jetty jetty){
-    int currentShipmentInJetty = jetty.getShipmentCapacity();
+  public boolean unloadShip(Jetty jetty){
+    LOGGER.info("Ship " + name + " come into " + jetty.getId() + " jetty");
     boolean success = jetty.setShipmentIntoJetty(shipment);
-
+    int currentShipmentInJetty = jetty.getShipmentCapacity();
     if (success){
       if (currentShipmentInJetty >= this.maxCapacity) {
         this.setShipment(this.maxCapacity);

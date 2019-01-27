@@ -1,45 +1,89 @@
 
-
-20:58:36.536 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into port
-20:58:36.544 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-20:58:36.544 [main] INFO  by.chebotar.service.port.Port - unlock()
-20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Titanic unload successfully
-20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into port
-20:58:36.545 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-20:58:36.545 [main] INFO  by.chebotar.service.port.Port - unlock()
-20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman unload successfully
-20:58:36.545 [main] INFO  by.chebotar.bean.Ship - Ship Man come into port
-20:58:36.546 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-20:58:36.546 [main] INFO  by.chebotar.service.port.Port - unlock()
-20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Man unload successfully
-20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into port
-20:58:36.547 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-20:58:36.547 [main] INFO  by.chebotar.service.port.Port - unlock()
-20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Bismark unload successfully
-20:58:36.547 [main] INFO  by.chebotar.bean.Ship - Ship Scotland come into port
-
-21:00:59.475 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into port
-21:00:59.500 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-21:00:59.500 [main] INFO  by.chebotar.service.port.Port - unlock()
-21:00:59.500 [main] INFO  by.chebotar.bean.Ship - Ship Titanic unload successfully
-21:00:59.500 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
-21:00:59.500 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into port
-21:00:59.500 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-21:00:59.500 [main] INFO  by.chebotar.service.port.Port - unlock()
-21:00:59.500 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman unload successfully
-21:00:59.501 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
-21:00:59.501 [main] INFO  by.chebotar.bean.Ship - Ship Man come into port
-21:00:59.501 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-21:00:59.501 [main] INFO  by.chebotar.service.port.Port - unlock()
-21:00:59.501 [main] INFO  by.chebotar.bean.Ship - Ship Man unload successfully
-21:00:59.501 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
-21:00:59.501 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into port
-21:00:59.501 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-21:00:59.501 [main] INFO  by.chebotar.service.port.Port - unlock()
-21:00:59.502 [main] INFO  by.chebotar.bean.Ship - Ship Bismark unload successfully
-21:00:59.502 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
-21:00:59.502 [main] INFO  by.chebotar.bean.Ship - Ship Scotland come into port
-21:00:59.502 [main] INFO  by.chebotar.service.port.Port - lock.lock() and semaphore.acquire()
-21:00:59.502 [main] INFO  by.chebotar.service.port.Port - unlock()
-21:00:59.502 [main] INFO  by.chebotar.bean.Ship - Ship Scotland unload successfully
-21:00:59.502 [main] INFO  by.chebotar.service.port.Port - exemptJetty : lock + add
+21:46:30.989 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into port
+21:46:31.014 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into 1 jetty
+21:46:31.014 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Titanic = 1000
+21:46:31.015 [main] INFO  by.chebotar.bean.Ship - Ship Titanic unload successfully
+21:46:31.015 [main] INFO  by.chebotar.bean.Ship - shipment of Titanic = 10000
+21:46:31.016 [main] INFO  by.chebotar.bean.Ship - And max capacity is 12000
+21:46:31.016 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into port
+21:46:31.017 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into 2 jetty
+21:46:31.017 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Flying Dutchman = 100
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman unload successfully
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - shipment of Flying Dutchman = 1200
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - And max capacity is 1200
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - Ship Man come into port
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - Ship Man come into 3 jetty
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Man = 4568
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - Ship Man unload successfully
+21:46:31.018 [main] INFO  by.chebotar.bean.Ship - shipment of Man = 10000
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - And max capacity is 30000
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into port
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into 4 jetty
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Bismark = 7896
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - Ship Bismark unload successfully
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - shipment of Bismark = 10000
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - And max capacity is 45689
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - Ship Scotland come into port
+21:46:31.019 [main] INFO  by.chebotar.bean.Ship - Ship Scotland come into 1 jetty
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Scotland = 775
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - Ship Scotland unload successfully
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - shipment of Scotland = 1000
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - And max capacity is 11230
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - Ship Great England come into port
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - Ship Great England come into 2 jetty
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Great England = 0
+21:46:31.020 [main] INFO  by.chebotar.bean.Ship - Ship Great England unload successfully
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - shipment of Great England = 4500
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - And max capacity is 4500
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - Ship name come into port
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - Ship name come into 3 jetty
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - Shipment on ship name = 7838
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - Ship name unload successfully
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - shipment of name = 4568
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - And max capacity is 65000
+21:46:31.021 [main] INFO  by.chebotar.bean.Ship - Ship another Great Ship come into port
+21:46:31.022 [main] INFO  by.chebotar.bean.Ship - Ship another Great Ship come into 4 jetty
+21:46:31.022 [main] INFO  by.chebotar.bean.Ship - Shipment on ship another Great Ship = 75
+21:46:31.022 [main] INFO  by.chebotar.bean.Ship - Ship another Great Ship unload successfully
+21:46:31.022 [main] INFO  by.chebotar.bean.Ship - shipment of another Great Ship = 600
+21:46:31.022 [main] INFO  by.chebotar.bean.Ship - And max capacity is 600
+21:46:31.023 [main] INFO  by.chebotar.bean.Ship - Ship Belorussia come into port
+21:46:31.023 [main] INFO  by.chebotar.bean.Ship - Ship Belorussia come into 1 jetty
+21:46:31.023 [main] INFO  by.chebotar.bean.Ship - Shipment on ship Belorussia = 228
+21:46:31.023 [main] INFO  by.chebotar.bean.Ship - Ship Belorussia unload successfully
+21:46:31.023 [main] INFO  by.chebotar.bean.Ship - shipment of Belorussia = 775
+21:46:31.023 [main] INFO  by.chebotar.bean.Ship - And max capacity is 1488
+21:46:31.024 [main] INFO  by.chebotar.bean.Ship - Ship name2 come into port
+21:46:31.024 [main] INFO  by.chebotar.bean.Ship - Ship name2 come into 2 jetty
+21:46:31.024 [main] INFO  by.chebotar.bean.Ship - Shipment on ship name2 = 9854
+21:46:31.024 [main] INFO  by.chebotar.bean.Ship - Ship name2 unload successfully
+21:46:31.024 [main] INFO  by.chebotar.bean.Ship - shipment of name2 = 4400
+21:46:31.024 [main] INFO  by.chebotar.bean.Ship - And max capacity is 65895
+22:36:36.559 [main] ERROR by.chebotar.service.parser.ShipParserFromJSON - by.chebotar.service.exception.ShipValidationServiceException: Shipment cannot be greater then maxCapacity of ship
+22:37:26.210 [main] ERROR by.chebotar.service.parser.ShipParserFromJSON - by.chebotar.service.exception.ShipValidationServiceException: Shipment cannot be greater then maxCapacity of ship
+22:40:20.388 [main] ERROR by.chebotar.service.parser.ShipParserFromJSON - by.chebotar.service.exception.ShipValidationServiceException: Shipment cannot be greater then maxCapacity of ship
+23:56:25.471 [main] INFO  by.chebotar.bean.Ship - Ship testShip come into 1 jetty
+23:56:25.506 [main] INFO  by.chebotar.bean.Ship - Ship testShip unload successfully
+23:57:13.208 [main] INFO  by.chebotar.bean.Ship - Ship testShip come into 1 jetty
+23:58:28.529 [main] INFO  by.chebotar.bean.Ship - Ship testShip unload successfully
+00:00:29.114 [main] INFO  by.chebotar.bean.Ship - Ship testShip come into 1 jetty
+00:01:06.776 [main] INFO  by.chebotar.bean.Ship - Ship testShip unload successfully
+00:01:44.841 [main] INFO  by.chebotar.bean.Ship - Ship testShip come into 1 jetty
+00:01:44.855 [main] INFO  by.chebotar.bean.Ship - Ship testShip unload successfully
+00:02:09.655 [main] INFO  by.chebotar.bean.Ship - Ship testShip come into 1 jetty
+00:02:09.872 [main] INFO  by.chebotar.bean.Ship - Ship testShip unload successfully
+00:13:30.734 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into port
+00:13:30.849 [main] INFO  by.chebotar.bean.Ship - Ship Titanic come into 1 jetty
+00:13:30.850 [main] INFO  by.chebotar.bean.Ship - Ship Titanic unload successfully
+00:13:30.851 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into port
+00:13:30.852 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman come into 2 jetty
+00:13:30.852 [main] INFO  by.chebotar.bean.Ship - Ship Flying Dutchman unload successfully
+00:13:30.853 [main] INFO  by.chebotar.bean.Ship - Ship Man come into port
+00:13:30.853 [main] INFO  by.chebotar.bean.Ship - Ship Man come into 3 jetty
+00:13:30.853 [main] INFO  by.chebotar.bean.Ship - Ship Man unload successfully
+00:13:30.854 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into port
+00:13:30.855 [main] INFO  by.chebotar.bean.Ship - Ship Bismark come into 4 jetty
+00:13:30.855 [main] INFO  by.chebotar.bean.Ship - Ship Bismark unload successfully
+00:13:30.855 [main] INFO  by.chebotar.bean.Ship - Ship Avrora come into port
+00:13:30.855 [main] INFO  by.chebotar.bean.Ship - Ship Avrora come into 1 jetty
+00:13:30.855 [main] INFO  by.chebotar.bean.Ship - Ship Avrora unload successfully

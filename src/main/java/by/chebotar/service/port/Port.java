@@ -21,12 +21,11 @@ public class Port {
   private final Queue<Jetty> jetties;
 
   private Lock lock = new ReentrantLock();
-  private Lock lock2 = new ReentrantLock();
 
   private Port(){
     jetties = new ArrayDeque<>(PORT_JETTIES_CAPACITY);
     for (int i = 0; i < PORT_JETTIES_CAPACITY; i++) {
-      jetties.add(new Jetty(JETTY_START_SHIPMENT_CAPACITY,JETTY_MAX_SHIPMENT_CAPACITY));
+      jetties.add(new Jetty(JETTY_START_SHIPMENT_CAPACITY,JETTY_MAX_SHIPMENT_CAPACITY, i+1));
     }
   }
 
@@ -47,26 +46,23 @@ public class Port {
     try{
       lock.lock();
       semaphore.acquire();
-      LOGGER.info("lock.lock() and semaphore.acquire()");
       return jetties.poll();
     } catch (InterruptedException e) {
       LOGGER.error(e);
       Thread.currentThread().interrupt();
     }finally {
       lock.unlock();
-      LOGGER.info("unlock()");
     }
     return null;
   }
 
   public void exemptJetty(Jetty jetty){
     try{
-      lock2.lock();
+      lock.lock();
       jetties.add(jetty);
-      LOGGER.info("exemptJetty : lock + add");
     } finally {
       semaphore.release();
-      lock2.unlock();
+      lock.unlock();
     }
   }
 

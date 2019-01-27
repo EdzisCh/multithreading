@@ -1,8 +1,8 @@
 [
   {
     "name" :  "Titanic",
-    "shipment" : 1000,
-    "maxCapacity" :  12000},
+    "shipment" : 1000000,
+    "maxCapacity" :  7},
   {
     "name" :  "Flying Dutchman",
     "shipment" : 100,
@@ -22,22 +22,12 @@
   },
   {
     "name" : "Great England",
-    "shipment" : 0,
-    "maxCapacity" : 4500
+    "shipment" : 7896,
+    "maxCapacity" : 0
   },
   {
     "name" : "name",
-    "shipment" : 7838,
-    "maxCapacity" : 65000
-  },
-  {
-    "name" : "another Great Ship",
-    "shipment" : 75,
-    "maxCapacity" : 600
-  },
-  {
-    "name" : "Belorussia",
-    "shipment" : 228,
-    "maxCapacity" : 1488
+    "shipment" : "783800",
+    "maxCapacity" : "65000"
   }
 ]

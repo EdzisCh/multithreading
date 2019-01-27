@@ -18,7 +18,7 @@ public class ShipParserFromJSON implements Parser<Ship> {
 
   private static final Logger LOGGER = LogManager.getLogger(ShipParserFromJSON.class);
   @Override
-  public List<Ship> parse(String path) {
+  public List<Ship> parse(String path) throws ShipValidationServiceException{
     List<Ship> ships = new ArrayList<>();
     Gson gson = new Gson();
     try {
@@ -26,7 +26,7 @@ public class ShipParserFromJSON implements Parser<Ship> {
       ships = gson.fromJson(new BufferedReader(new FileReader(path)), shipsListType);
       ShipValidator validator = new ShipValidator();
       validator.isValid(ships);
-    } catch (ShipValidationServiceException | FileNotFoundException e) {
+    } catch (FileNotFoundException e) {
       LOGGER.error(e);
     }
     return ships;

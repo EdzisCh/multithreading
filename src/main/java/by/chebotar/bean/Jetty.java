@@ -5,11 +5,13 @@ public class Jetty{
 
   private int shipmentCapacity;
   private final int maxCapacity;
+  private final long id;
 
 
-  public Jetty(int startShipmentCapacity, int maxCapacity) {
+  public Jetty(int startShipmentCapacity, int maxCapacity, long id) {
     shipmentCapacity = startShipmentCapacity;
     this.maxCapacity = maxCapacity;
+    this.id = id;
   }
 
   public boolean setShipmentIntoJetty(int shipmentCapacity) {
@@ -28,6 +30,10 @@ public class Jetty{
     return true;
   }
 
+  public long getId() {
+    return id;
+  }
+
   public int getShipmentCapacity() {
     return shipmentCapacity;
   }
@@ -39,6 +45,7 @@ public class Jetty{
   @Override
   public String toString() {
     return "Jetty{" +
+        "id=" + id +
         ", shipmentCapacity=" + shipmentCapacity +
         ", maxCapacity=" + maxCapacity +
         '}';
