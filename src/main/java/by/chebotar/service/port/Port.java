@@ -15,12 +15,13 @@ import org.apache.logging.log4j.Logger;
 
 public class Port {
 
-  public static volatile Port instance;
+  public static Port instance;
   private static final Logger LOGGER = LogManager.getLogger(Port.class);
   private final Semaphore semaphore = new Semaphore(PORT_JETTIES_CAPACITY, true);
   private final Queue<Jetty> jetties;
 
   private Lock lock = new ReentrantLock();
+  private static Lock instanceLock = new ReentrantLock();
 
   private Port(){
     jetties = new ArrayDeque<>(PORT_JETTIES_CAPACITY);
@@ -30,15 +31,15 @@ public class Port {
   }
 
   public static Port getInstance(){
+    instanceLock.lock();
     Port localInstance = instance;
-    if (localInstance == null){
-      synchronized (Port.class){
-        localInstance =instance;
-        if (localInstance == null){
-          instance = localInstance = new Port();
-        }
+    if(localInstance == null){
+      localInstance = instance;
+      if (localInstance == null){
+        instance = localInstance = new Port();
       }
     }
+    instanceLock.unlock();
     return instance;
   }
 

@@ -9,6 +9,6 @@ public class Service {
 
   public void startSimulation(String path) throws ShipValidationServiceException {
     List<Ship> ships = new ShipParserFromJSON().parse(path);
-    ships.forEach(Ship::run);
+    ships.forEach( ship -> new Thread(ship).start());
   }
 }

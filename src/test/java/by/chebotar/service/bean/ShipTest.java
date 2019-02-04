@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class ShipTest {
 
   @Test
-  public void shouldLoadAndUnloadShipmentInJetty(){
+  public void shouldLoadAndUnloadShipmentInJetty() throws InterruptedException {
     Jetty jetty = new Jetty(200,500,1);
     Ship ship = new Ship("testShip",100,380);
     ship.unloadShip(jetty);

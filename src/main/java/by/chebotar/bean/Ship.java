@@ -4,6 +4,7 @@ import by.chebotar.service.exception.ServiceException;
 import by.chebotar.service.port.Port;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -54,14 +55,25 @@ public class Ship implements Runnable, Serializable {
   @Override
   public void run() {
     port = Port.getInstance();
+
     LOGGER.info("Ship " + this.name + " come into port");
+
     boolean shipmentUnloaded = false;
     int numberOfCurrentJetties = 0;
+
     while(!shipmentUnloaded) {
       Jetty currentJetty = port.getJetty();
       numberOfCurrentJetties++;
-      shipmentUnloaded = unloadShip(currentJetty);
+
+      try {
+        shipmentUnloaded = unloadShip(currentJetty);
+      } catch (InterruptedException e) {
+        LOGGER.error(e);
+        Thread.currentThread().interrupt();
+      }
+
       port.exemptJetty(currentJetty);
+
       if (numberOfCurrentJetties >= ATTEMPTS){
         try{
           throw new  ServiceException("Port cannot serve ship" + name);
@@ -74,7 +86,7 @@ public class Ship implements Runnable, Serializable {
 
   }
 
-  public boolean unloadShip(Jetty jetty){
+  public boolean unloadShip(Jetty jetty) throws InterruptedException {
     LOGGER.info("Ship " + name + " come into " + jetty.getId() + " jetty");
     boolean success = jetty.setShipmentIntoJetty(shipment);
     int currentShipmentInJetty = jetty.getShipmentCapacity();
@@ -88,6 +100,8 @@ public class Ship implements Runnable, Serializable {
         this.setShipment(currentShipmentInJetty);
         success = jetty.removeShipmentFromJetty(currentShipmentInJetty);
       }
+      TimeUnit.NANOSECONDS.sleep(100);
+      LOGGER.info( this.name + " is unloading");
     }
     if(success){
       LOGGER.info("Ship " + this.name + " unload successfully");
